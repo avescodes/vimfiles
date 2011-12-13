@@ -81,10 +81,10 @@ if has("statusline") && !&cp
   set statusline+=%{fugitive#statusline()}
 
   " Finish the statusline
-  set statusline+=Line:%l/%L [%p%%]
-  set statusline+=Col:%v
-  set statusline+=Buf:#%n
-  set statusline+=[%b][0x%B]
+  set statusline+=Line:%l/%L\ [%p%%]
+  set statusline+=\ Col:%v
+  set statusline+=\ Buf:#%n
+  set statusline+=\ [%b][0x%B]
 endif
 
 let g:CommandTMaxHeight=10
