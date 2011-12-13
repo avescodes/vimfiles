@@ -8,7 +8,13 @@ set background=dark
 colorscheme solarized
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-set list listchars=tab:▸\ ,trail:· " Display extra whitespace
+set list
+set listchars=""
+set listchars+=tab:▸\ 
+set listchars+=trail:·
+set listchars+=extends:>
+set listchars+=precedes:<
+
 set number                         " Show numbers gutter
 set numberwidth=3                  " Numbers gutter 3 cols wide
 set ruler       " show the cursor position all the time
@@ -26,6 +32,12 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+function s:setupWrapping()
+  set wrap
+  set wrapmargin=2
+  set textwidth=72
+endfunction
+
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
@@ -34,7 +46,9 @@ if has("autocmd")
 
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
-end
+
+  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
+endif
 
 let mapleader = ","
 
