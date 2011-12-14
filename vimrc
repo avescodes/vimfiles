@@ -5,7 +5,7 @@ call pathogen#infect()
 syntax enable
 set encoding=utf-8
 set background=dark
-colorscheme solarized
+colorscheme molokai
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set list
@@ -32,7 +32,7 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
-function s:setupWrapping()
+function! s:setupWrapping()
   set wrap
   set wrapmargin=2
   set textwidth=72
@@ -92,7 +92,7 @@ if has("statusline") && !&cp
   set statusline=%f\ %m\ %r
 
   " Add fugitive
-  set statusline+=%{fugitive#statusline()}
+  set statusline+=%{fugitive#statusline()}\ 
 
   " Finish the statusline
   set statusline+=Line:%l/%L\ [%p%%]
