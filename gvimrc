@@ -8,7 +8,8 @@ let &columns = g:halfsize
 " Font
 set guifont=Pragmata_TT\ for\ Powerline:h15.00
 let g:Powerline_symbols = 'fancy'
-set antialias! " Turn off AA
+let g:Powerline_theme = 'solarized'
+set antialias
 
 " No audible bell
 set vb
