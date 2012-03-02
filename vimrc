@@ -77,6 +77,13 @@ map <Right> :echo "no!"<cr>
 map <Up>    :echo "no!"<cr>
 map <Down>  :echo "no!"<cr>
 
+vnoremap < <gv
+vnoremap > >gv
+
+" For pairing
+inoremap jk <Esc>
+inoremap jj <Esc>
+
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
 
