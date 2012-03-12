@@ -32,6 +32,7 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+set mouse=a " Enable mouse events (scrolling), particularly over tmux+iTerm2
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
