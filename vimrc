@@ -1,7 +1,33 @@
-set nocompatible                " choose no compatibility with legacy vi
+" Vundle that shit. Vimrcs love vundles. =====================================
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
-call pathogen#infect()
+Bundle 'gmarik/vundle'
 
+" Aesthetics
+Bundle 'mrtazz/molokai.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'altercation/vim-colors-solarized'
+
+" Syntaxon
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+
+" Extras
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-endwise'
+Bundle 'mileszs/ack.vim'
+Bundle 'kien/ctrlp.vim'
+
+" Vim, we need to talk... ====================================================
 syntax enable
 set encoding=utf-8
 set background=dark
@@ -50,14 +76,6 @@ nnoremap <leader><leader> <c-^>
 " find merge conflict markers
 nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-" Command-T
-" http://vimcasts.org/e/14
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
-map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
-
-
-
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 
 nmap <F1> <Esc>                    " No help please
@@ -96,6 +114,3 @@ if has("statusline") && !&cp
   set statusline+=\ Buf:#%n
   set statusline+=\ [%b][0x%B]
 endif
-
-let g:CommandTMaxHeight=10
-
