@@ -1,4 +1,4 @@
-task :default => [:tmp_dirs, :update, :command_t, :link]
+task :default => [:tmp_dirs, :update, :link]
 
 task :update do
   sh "git submodule update --init"
@@ -18,14 +18,4 @@ end
 task :tmp_dirs do
   mkdir_p "_backup"
   mkdir_p "_temp"
-end
-
-task :command_t do
-  puts "Compiling Command-T plugin..."
-  Dir.chdir "bundle/command-t/ruby/command-t" do
-    ruby = %w[/usr/bin/ruby1.8 /usr/bin/ruby].find {|rb| File.executable? rb } || 'ruby'
-    cmd = Array(ruby) + %w[extconf.rb]
-    sh(*cmd)
-    sh "make clean && make"
-  end
 end

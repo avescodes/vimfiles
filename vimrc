@@ -58,7 +58,18 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+"" CtrlP
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
+
 set mouse=a " Enable mouse events (scrolling), particularly over tmux+iTerm2
+
+if version >= 730 && has("macunix")
+  " Default yank and paste go to Mac's clipboard
+  set clipboard=unnamed
+endif
+
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
@@ -86,12 +97,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" disable cursor keys in normal mode
-map <Left>  :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up>    :echo "no!"<cr>
-map <Down>  :echo "no!"<cr>
-
+" Reselect visual block after indent/outdent - vimbits.com/bits/20
 vnoremap < <gv
 vnoremap > >gv
 
