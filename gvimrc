@@ -8,7 +8,6 @@ let &columns = g:halfsize
 " Font
 set guifont=Pragmata_TT\ for\ Powerline:h15.00
 let g:Powerline_symbols = 'fancy'
-let g:Powerline_theme = 'solarized'
 set antialias
 
 " No audible bell
@@ -21,7 +20,14 @@ set guioptions-=r
 set guioptions-=l
 set guioptions+=c " Use console dialogs
 
-if has("gui_macvim")
-  " Fullscreen takes up entire screen
+if has("mac")
   set fuoptions=maxhorz,maxvert
+  
+  " https://github.com/spicycode/Vimlander-2-The-Quickening/blob/master/keybindings.gui.vim
+  " Unmap Apple+S to remap to Esc, then :w<CR>
+  macmenu &File.Save key=<nop>
+  imap <D-s> <Esc>:w<CR>
+  map <D-s> :w<CR>
 end
+
+

@@ -58,6 +58,10 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+
+set splitbelow
+set splitright
+
 "" CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
