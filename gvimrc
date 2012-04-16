@@ -22,9 +22,9 @@ set guioptions+=c " Use console dialogs
 
 if has("mac")
   set fuoptions=maxhorz,maxvert
-  
-  " https://github.com/spicycode/Vimlander-2-The-Quickening/blob/master/keybindings.gui.vim
+
   " Unmap Apple+S to remap to Esc, then :w<CR>
+  " https://github.com/spicycode/Vimlander-2-The-Quickening/blob/master/keybindings.gui.vim
   macmenu &File.Save key=<nop>
   imap <D-s> <Esc>:w<CR>
   map <D-s> :w<CR>

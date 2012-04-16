@@ -5,3 +5,4 @@
 syntax
 syntax/syntax.vim
 spell
+bundle
