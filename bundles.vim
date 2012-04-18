@@ -26,3 +26,4 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle "Syntastic"
