@@ -8,6 +8,7 @@ Bundle 'gmarik/vundle'
 Bundle 'mrtazz/molokai.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'skammer/vim-css-color'
 
 " Syntaxon
 Bundle 'cakebaker/scss-syntax.vim'
@@ -22,5 +23,6 @@ Bundle 'vim-ruby/vim-ruby'
 " Extras
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'

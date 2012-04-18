@@ -1,4 +1,6 @@
 syntax enable
+
+set directory=/tmp/
 set encoding=utf-8
 set background=dark
 colorscheme molokai
@@ -38,4 +40,9 @@ set mouse=a " Enable mouse events (scrolling), particularly over tmux+iTerm2
 if version >= 730 && has("macunix")
   " Default yank and paste go to Mac's clipboard
   set clipboard=unnamed
+endif
+
+if v:version >= 703
+  set undofile
+  let &undodir=&directory
 endif
