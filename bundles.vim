@@ -8,7 +8,6 @@ Bundle 'gmarik/vundle'
 Bundle 'mrtazz/molokai.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'skammer/vim-css-color'
 
 " Syntaxon
 Bundle 'cakebaker/scss-syntax.vim'
