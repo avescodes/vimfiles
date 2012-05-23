@@ -46,3 +46,5 @@ if v:version >= 703
   set undofile
   let &undodir=&directory
 endif
+
+command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
