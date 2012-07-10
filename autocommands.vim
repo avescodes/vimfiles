@@ -7,3 +7,4 @@ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= l
 autocmd BufRead,BufNewFile {Vagrantfile,Guardfile,Gemfile,Rakefile,Capfile,*.rake,config.ru} set ft=ruby
 autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                                  set ft=gitcommit
 autocmd BufNewFile,BufRead {*.json}                                                          set ft=javascript
+autocmd BufRead,BufNewFile {*.cljs}                                                          setlocal filetype=clojure

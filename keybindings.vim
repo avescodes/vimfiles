@@ -1,4 +1,5 @@
 let mapleader = ","
+let maplocalleader = ","
 
 " CtrlP maps
 map <leader>p :CtrlP<cr>
