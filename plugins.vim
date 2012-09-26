@@ -1,5 +1,5 @@
 "" CtrlP
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/gems/*
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 "" VimClojure
