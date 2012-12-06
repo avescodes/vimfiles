@@ -6,3 +6,6 @@ source ~/.vim/plugins.vim
 source ~/.vim/autocommands.vim
 source ~/.vim/keybindings.vim
 source ~/.vim/statusline.vim
+
+set guifont=Anonymous\ Pro\ for\ Powerline:h13
+

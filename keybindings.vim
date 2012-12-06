@@ -52,6 +52,7 @@ function! RenameFile()
     endif
 endfunction
 map <leader>mv :call RenameFile()<cr>
+map <leader>mk :make<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PROMOTE VARIABLE TO RSPEC LET
