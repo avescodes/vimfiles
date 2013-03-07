@@ -35,7 +35,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'wookiehangover/jshint.vim'
 Bundle 'TailMinusF'
 Bundle 'taglist.vim'
-Bundle 'Tabular'
+Bundle 'godlygeek/tabular'
+Bundle 'SirVer/ultisnips'
 Bundle 'airblade/vim-gitgutter'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -185,6 +186,7 @@ function! RenameFile()
     endif
 endfunction
 map <leader>mv :call RenameFile()<cr>
+map <leader>mk :make<cr>
 
 command! KillWhitespace :normal :%s/ *$//g<cr><c-o><cr>
 map <leader>ws :call KillWhitespace
