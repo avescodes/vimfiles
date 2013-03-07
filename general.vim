@@ -17,6 +17,8 @@ set number                         " Show numbers gutter
 set numberwidth=3                  " Numbers gutter 3 cols wide
 set ruler       " show the cursor position all the time
 set cursorline
+set scrolloff=3
+set shortmess=atI
 
 "" Whitespace
 set nowrap                      " don't wrap lines
