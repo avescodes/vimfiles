@@ -23,6 +23,8 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-static'
 
 " Extras
 Bundle 'tpope/vim-commentary'
