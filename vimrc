@@ -59,7 +59,7 @@ set listchars+=trail:·
 set listchars+=extends:>
 set listchars+=precedes:<
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*,*.pyc
 
 set number                         " Show numbers gutter
 set numberwidth=3                  " Numbers gutter 3 cols wide
@@ -132,10 +132,11 @@ au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= l
       \| exe "normal! g`\"" | endif
 
 " Treat JSON files like JavaScript
-autocmd BufRead,BufNewFile {Vagrantfile,Guardfile,Gemfile,Rakefile,Capfile,*.rake,config.ru} set ft=ruby
-autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                                  set ft=gitcommit
-autocmd BufNewFile,BufRead {*.json}                                                          set ft=javascript
-autocmd BufRead,BufNewFile {*.cljs}                                                          setlocal filetype=clojure
+autocmd BufRead,BufNewFile {Vagrantfile,Guardfile,Gemfile,Rakefile,Capfile,*.rake,config.ru} set filetype=ruby
+autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                                  set filetype=gitcommit
+autocmd BufRead,BufNewFile {*.json}                                                          set filetype=javascript
+autocmd BufRead,BufNewFile {*.cljs,*.edn}                                                    setlocal filetype=clojure
+autocmd FileType           python                                                            setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
