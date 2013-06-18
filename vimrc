@@ -16,6 +16,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 " Syntaxon
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'guns/vim-clojure-static'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-git'
@@ -23,23 +24,23 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-fireplace'
-Bundle 'guns/vim-clojure-static'
 
 " Extras
+Bundle 'SirVer/ultisnips'
+Bundle 'TailMinusF'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'godlygeek/tabular'
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'taglist.vim'
+Bundle 'tpope/vim-classpath'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 Bundle 'wookiehangover/jshint.vim'
-Bundle 'TailMinusF'
-Bundle 'taglist.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'SirVer/ultisnips'
-Bundle 'airblade/vim-gitgutter'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General config
@@ -141,6 +142,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" CtrlP
+let g:ctrlp_root_markers = ['.ctrlp-root']
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Remember last location in file, but not for commit messages.
