@@ -26,6 +26,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 
 " Extras
+Bundle 'paredit.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'TailMinusF'
 Bundle 'airblade/vim-gitgutter'
