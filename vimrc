@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 
 " Aesthetics
 Bundle 'mrtazz/molokai.vim'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
 
@@ -24,9 +25,11 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'derekwyatt/vim-scala'
 
 " Extras
 Bundle 'paredit.vim'
+Bundle 'guns/vim-sexp'
 Bundle 'SirVer/ultisnips'
 Bundle 'TailMinusF'
 Bundle 'airblade/vim-gitgutter'
@@ -52,7 +55,7 @@ syntax enable
 set directory=/tmp/
 set encoding=utf-8
 set background=dark
-colorscheme molokai
+colorscheme jellybeans
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set list
@@ -62,14 +65,16 @@ set listchars+=trail:·
 set listchars+=extends:>
 set listchars+=precedes:<
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*,*.pyc
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*,*.pyc,target/*,*.jar,*.class
 
 set number                         " Show numbers gutter
 set numberwidth=3                  " Numbers gutter 3 cols wide
 set ruler       " show the cursor position all the time
 set cursorline
 set scrolloff=3
+set scrolljump=8
 set shortmess=atI
+set lazyredraw
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -108,7 +113,7 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-n> :call NumberToggle()<cr>
+" nnoremap <C-n> :call NumberToggle()<cr>
 
 autocmd FocusLost * :set number
 autocmd FocusGained * :set relativenumber
@@ -166,6 +171,8 @@ autocmd FileType           python                                               
 let mapleader = ","
 let maplocalleader = ","
 
+nmap <F1> <nop>
+
 " CtrlP maps
 map <leader>p :CtrlP<cr>
 map <leader>js :CtrlP app/assets/javascripts<cr>
@@ -189,9 +196,6 @@ vnoremap > >gv
 " For pairing
 inoremap jk <Esc>
 inoremap jj <Esc>
-
-" Clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
 
 " Rename current file
 function! RenameFile()
