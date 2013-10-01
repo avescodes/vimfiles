@@ -12,8 +12,8 @@ Bundle 'gmarik/vundle'
 " Aesthetics
 Bundle 'mrtazz/molokai.vim'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
 
 " Syntaxon
 Bundle 'cakebaker/scss-syntax.vim'
@@ -65,7 +65,8 @@ set listchars+=trail:·
 set listchars+=extends:>
 set listchars+=precedes:<
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*,*.pyc,target/*,*.jar,*.class
+set wildignore+=target,*.jar,*.class,ivyrepo
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.un~,.DS_Store,.gitkeep,*/vendor/*,*/bin/*,.*,*/coverage/*,*.pyc
 
 set number                         " Show numbers gutter
 set numberwidth=3                  " Numbers gutter 3 cols wide
@@ -121,32 +122,18 @@ autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 autocmd CursorMoved * :set relativenumber
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:Powerline_symbols = 'fancy'
-
 set laststatus=2  " always show the status bar
-
-if has("statusline") && !&cp
-
-  " Start the status line
-  set statusline=%f\ %m\ %r
-
-  " Add fugitive
-  set statusline+=%{fugitive#statusline()}\ 
-
-  " Finish the statusline
-  set statusline+=Line:%l/%L\ [%p%%]
-  set statusline+=\ Col:%v
-  set statusline+=\ Buf:#%n
-  set statusline+=\ [%b][0x%B]
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Extras Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" vim-airline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled=1
 
 "" CtrlP
 let g:ctrlp_root_markers = ['.ctrlp-root']
@@ -167,7 +154,6 @@ autocmd FileType           python                                               
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keybindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let mapleader = ","
 let maplocalleader = ","
 
