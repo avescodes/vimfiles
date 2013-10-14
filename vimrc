@@ -45,7 +45,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'wookiehangover/jshint.vim'
-Bundle 'christoomey/vim-tmux-navigator'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General config
@@ -174,6 +173,12 @@ nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
 " No help please
 nmap <F1> <Esc>
+
+" easier navigation between split windows
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 " Reselect visual block after indent/outdent - vimbits.com/bits/20
 vnoremap < <gv
