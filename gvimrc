@@ -6,7 +6,7 @@ set lines=50
 let &columns = g:halfsize
 
 " Font
-set guifont=Anonymous\ Pro\ for\ Powerline:h15.00
+set guifont=Essential\ PragmataPro\ for\ Powerline:h18.00
 set antialias
 
 " No audible bell
